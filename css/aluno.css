@@ -619,3 +619,289 @@ footer p {
     }
 
 }
+
+/* =========================
+           MODAL DE HORÁRIOS
+        ========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(23, 35, 27, 0.65);
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay[hidden] {
+    display: none;
+}
+
+body.modal-aberto {
+    overflow: hidden;
+}
+
+.modal {
+    width: 100%;
+    max-width: 560px;
+    max-height: 92vh;
+    overflow-y: auto;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* Animação de abertura */
+
+.modal-overlay.aberto {
+    animation: overlayEntrada 0.3s ease-out both;
+}
+
+.modal-overlay.aberto .modal {
+    animation: modalEntrada 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
+}
+
+@keyframes overlayEntrada {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes modalEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Topo escuro compacto: ícone e título lado a lado */
+
+.modal-topo {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 24px 40px 24px 32px;
+
+    background: #17231b;
+    color: white;
+}
+
+.modal-topo::before {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -110px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: #1d8b4c;
+    opacity: 0.25;
+}
+
+.modal-icone {
+    position: relative;
+    flex-shrink: 0;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #26342c;
+
+    font-size: 28px;
+}
+
+.modal-topo h3 {
+    position: relative;
+
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    font-size: 22px;
+    line-height: 1;
+
+    transition: background 0.2s;
+}
+
+.modal-fechar:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.modal-fechar:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+
+/* Corpo */
+
+.modal-corpo {
+    padding: 28px 32px 32px;
+}
+
+.modal-grupo {
+    overflow: hidden;
+
+    border: 1.5px solid #c9d4cd;
+    border-radius: 14px;
+}
+
+.modal-grupo + .modal-grupo {
+    margin-top: 18px;
+}
+
+.modal-grupo h4 {
+    padding: 12px 20px;
+
+    background: #1d8b4c;
+    color: white;
+
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.modal-horarios {
+    list-style: none;
+}
+
+.modal-horarios li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #e3e9e5;
+}
+
+.modal-horarios li:last-child {
+    border-bottom: none;
+}
+
+.modal-horarios strong {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.modal-horarios span {
+    padding: 6px 13px;
+
+    border-radius: 999px;
+
+    background: #e5f5eb;
+    color: #146b39;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.modal-local {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 26px;
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    background: #f5f7f5;
+}
+
+.modal-local-icone {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: 20px;
+}
+
+.modal-local p {
+    font-size: 15px;
+    color: #6b756e;
+}
+
+.modal-local strong {
+    color: #17231b;
+}
+
+.modal-vazio {
+    padding: 34px 20px;
+
+    border-radius: 14px;
+    border: 1px dashed #d5ddd8;
+
+    background: #f7f8f6;
+
+    color: #737d76;
+
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .modal-topo {
+        padding: 20px 60px 20px 22px;
+    }
+
+    .modal-corpo {
+        padding: 22px 22px 26px;
+    }
+
+    .modal-topo h3 {
+        font-size: 22px;
+    }
+}
