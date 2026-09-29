@@ -1,0 +1,147 @@
+/* ==========================
+   TELA DE CRIAR CONTA
+   (carregue depois do style.css)
+========================== */
+
+.login-right{
+    padding:44px 48px;
+}
+
+.login-right h2{
+    font-size:30px;
+}
+
+.login-description{
+    margin-bottom:24px;
+}
+
+.login-description a{
+    color:#1d8b4c;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.login-description a:hover{
+    text-decoration:underline;
+}
+
+
+/* Campos lado a lado */
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.input-group{
+    margin-bottom:16px;
+}
+
+.input-group input{
+    background:#fff;
+    transition:border-color .2s, box-shadow .2s;
+}
+
+.input-group input:focus{
+    border-color:#1d8b4c;
+    box-shadow:0 0 0 3px rgba(29,139,76,.15);
+}
+
+.input-group input.erro{
+    border-color:#d33;
+}
+
+
+/* Modalidades */
+
+.modalidades{
+    border:none;
+    margin-bottom:22px;
+}
+
+.modalidades legend{
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+    padding:0;
+}
+
+.modalidades legend small{
+    font-weight:normal;
+    color:#7a837d;
+}
+
+.chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.chip{
+    cursor:pointer;
+}
+
+.chip input{
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+}
+
+.chip span{
+    display:inline-block;
+    padding:9px 16px;
+    border:1.5px solid #dfe4e0;
+    border-radius:999px;
+    font-size:14px;
+    background:#fff;
+    color:#17231b;
+    transition:.15s;
+    user-select:none;
+}
+
+.chip:hover span{
+    border-color:#1d8b4c;
+}
+
+.chip input:checked + span{
+    background:#1d8b4c;
+    border-color:#1d8b4c;
+    color:#fff;
+    font-weight:bold;
+}
+
+.chip input:focus-visible + span{
+    outline:2px solid #17231b;
+    outline-offset:2px;
+}
+
+.modalidades.erro .chip span{
+    border-color:#d33;
+}
+
+
+/* Mensagens */
+
+#mensagem{
+    margin-top:14px;
+    min-height:20px;
+}
+
+#mensagem.sucesso{
+    color:#1d8b4c;
+}
+
+
+/* Responsivo */
+
+@media(max-width:600px){
+    .login-right{
+        padding:32px 22px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+}

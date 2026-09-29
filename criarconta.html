@@ -2,44 +2,24 @@
 <html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFSport - Criar conta</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>iFSport - Login</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
-
 
 <body>
 
-
 <div id="loginPage">
-
-
     <div class="login-container">
 
-
         <!-- LADO ESQUERDO -->
-
         <div class="login-left">
+            <div class="login-logo"><span>IF</span>Sports</div>
 
-
-            <div class="login-logo">
-                <span>IF</span>Sports
-            </div>
-
-
-
-            <h1>
-                Seu esporte.
-                <br>
-                Seu <span>IF.</span>
-            </h1>
-
-
+            <h1>Seu esporte.<br>Seu <span>IF.</span></h1>
 
             <p>
                 A plataforma esportiva do Instituto Federal.
@@ -47,161 +27,83 @@
                 e acompanhe suas atividades.
             </p>
 
-
-
             <div class="login-sports">
-
                 <div>⚽</div>
                 <div>🏀</div>
                 <div>🏐</div>
                 <div>🏓</div>
-
             </div>
-
-
         </div>
 
-
-
-
-
         <!-- LADO DIREITO -->
-
         <div class="login-right">
 
-
-            <h2>
-                Crie sua conta
-            </h2>
-
-
+            <h2>Crie sua conta</h2>
             <p class="login-description">
                 Já tem conta? <a href="index.html">Entrar</a>
             </p>
 
+            <form id="formCadastro" novalidate>
 
                 <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name"
+                           placeholder="Como está na sua matrícula" required>
+                </div>
 
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="matricula">Matrícula</label>
+                        <input type="text" id="matricula" name="matricula" inputmode="numeric"
+                               placeholder="Matrícula do IFRN" required>
+                    </div>
 
-                <label>
-                    Nome Completo
-                </label>
+                    <div class="input-group">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input type="date" id="nascimento" name="nascimento"
+                               autocomplete="bday" required>
+                    </div>
+                </div>
 
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email"
+                               placeholder="voce@email.com" required>
+                    </div>
 
-                <input 
-                type="text"
-                id="nome"
-                placeholder="Digite seu nome">
+                    <div class="input-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" inputmode="numeric"
+                               maxlength="14" placeholder="000.000.000-00" required>
+                    </div>
+                </div>
 
+                <fieldset class="modalidades">
+                    <legend>Modalidades desejadas <small>(escolha uma ou mais)</small></legend>
 
-            </div>
+                    <div class="chips">
+                        <label class="chip"><input type="checkbox" name="modalidades" value="futsal"><span>Futsal</span></label>
+                        <label class="chip"><input type="checkbox" name="modalidades" value="futebol"><span>Futebol</span></label>
+                        <label class="chip"><input type="checkbox" name="modalidades" value="handebol"><span>Handebol</span></label>
+                        <label class="chip"><input type="checkbox" name="modalidades" value="basquete"><span>Basquete</span></label>
+                        <label class="chip"><input type="checkbox" name="modalidades" value="volei"><span>Vôlei</span></label>
+                        <label class="chip"><input type="checkbox" name="modalidades" value="natacao"><span>Natação</span></label>
+                        <label class="chip"><input type="checkbox" name="modalidades" value="atletismo"><span>Atletismo</span></label>
+                        <label class="chip"><input type="checkbox" name="modalidades" value="tenis-de-mesa"><span>Tênis de mesa</span></label>
+                    </div>
+                </fieldset>
 
+                <button type="submit" class="login-button">Criar conta</button>
 
-            <div class="input-group">
-
-
-                <label>
-                    Matrícula
-                </label>
-
-
-                <input 
-                type="text"
-                id="matricula"
-                placeholder="Digite sua matrícula do IFRN">
-
-
-            </div>
-
-
-            <div class="input-group">
-
-
-                <label>
-                    E-Mail
-                </label>
-
-
-                <input 
-                type="text"
-                id="email"
-                placeholder="Digite seu E-Mail">
-
-
-            </div>
-
-
-            <div class="input-group">
-
-
-                <label>
-                    CPF
-                </label>
-
-
-                <input 
-                type="text"
-                id="cpf"
-                placeholder="Digite seu CPF">
-
-
-            </div>
-
-            <div class="input-group">
-
-
-                <label for="modalidades">
-                    Modalidade desejada
-                </label>
-
-
-                <select name="modalidades" id="modalidades">
-                    <option value="futsal">Futsal</option>
-                    <option value="voleibol">Voleibol</option>
-                    <option value="handebol">Handebol</option>
-                    <option value="tenis de mesa">Tênis de Mesa</option>
-                </select>
-
-
-            </div>
-
-
-
-
-
-
-
-            <button 
-            class="login-button"
-            onclick="login()">
-
-                Entrar
-
-            </button>
-
-
-
-
-            <p id="mensagem"></p>
-
-            <a class="esquecisenha" href="https://www.google.com">Esqueci a senha</a>
-
+                <p id="mensagem" role="alert"></p>
+            </form>
 
         </div>
-
-
-
     </div>
-
-
 </div>
 
-
-
-
-<script src="js/login.js"></script>
-
+<script src="js/cadastro.js"></script>
 
 </body>
-
 </html>
