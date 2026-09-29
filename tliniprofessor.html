@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iFSport - Aluno</title>
+
+    <link rel="stylesheet" href="css/aluno.css">
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>IFSports</title>
+
+    </head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+            <span>IF</span>Sports
+        </div>
+
+
+        <nav>
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#modalidades">
+                Modalidades
+            </a>
+
+            <a href="#treinos">
+                Treinos
+            </a>
+
+
+        </nav>
+
+
+        <button class="btn-professor" onclick="irParaPagina()">
+            Painel do Professor
+        </button>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section class="hero" id="inicio">
+
+
+            <div class="hero-text">
+
+
+                <span class="tag">
+                    ESPORTE NO IF
+                </span>
+
+
+                <h1>
+
+                    Seu esporte.
+                    <br>
+
+                    Seu <span>IF.</span>
+
+                </h1>
+
+
+                <p>
+
+                    Encontre modalidades, confira os horários
+                    dos treinos e participe das atividades
+                    esportivas do Instituto Federal.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+
+                    <button class="btn-secondary" onclick="irParaModalidades()">
+
+                        Ver modalidades
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CARD -->
+
+            <div class="hero-card">
+
+
+                <div class="bola">
+                    ⚽
+                </div>
+
+
+                <h2>
+                    Movimente-se
+                </h2>
+
+
+                <p>
+
+                    Faça parte das atividades esportivas
+                    do seu campus.
+
+                </p>
+
+
+                <div class="stats">
+
+
+                    <div>
+
+                        <strong>
+                            8+
+                        </strong>
+
+                        <small>
+                            Modalidades
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            20+
+                        </strong>
+
+                        <small>
+                            Treinos
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            100+
+                        </strong>
+
+                        <small>
+                            Atletas
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             MODALIDADES
+        ========================= -->
+
+        <section class="section" id="modalidades">
+
+
+            <div class="section-title">
+
+
+                <span>
+                    EXPLORE
+                </span>
+
+
+                <h2>
+                    Modalidades esportivas
+                </h2>
+
+
+                <p>
+                    Escolha seu esporte e encontre os treinos fixos.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="sports-grid">
+
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        ⚽
+                    </div>
+
+                    <h3>
+                        Futebol Society
+                    </h3>
+
+                    <p>
+                        Treinos e competições.
+                    </p>
+
+                    <button onclick="irParaPaginaSociety()">Ver horários →</button>
+
+                </div>
+
+                
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        🏊‍♂️
+                    </div>
+
+                    <h3>
+                        Natação
+                    </h3>
+
+                    <p>
+                        Treine e evolua .
+                    </p>
+
+                    <button onclick="irParaPaginaNatacao()">Ver horários →</button>
+
+                </div>
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        🏃‍♂️
+                    </div>
+
+                    <h3>
+                        Atletismo
+                    </h3>
+
+                    <p>
+                        Treinos e competições.
+                    </p>
+
+                    <button onclick="irParaPaginaAtletismo()">Ver horários →</button>
+
+                </div>
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        🏀
+                    </div>
+
+                    <h3>
+                        Basquete
+                    </h3>
+
+                    <p>
+                        Treinos e campeonatos.
+                    </p>
+
+                    <button onclick="irParaPaginaBasquete()">Ver horários →</button>
+
+                </div>
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        ⚽
+                    </div>
+
+                    <h3>
+                        Futsal
+                    </h3>
+
+                    <p>
+                        Treinos e competições.
+                    </p>
+
+                    <button onclick="irParaPaginaFutsal()">Ver horários →</button>
+
+                </div>
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        🤾
+                    </div>
+
+                    <h3>
+                        Handebol
+                    </h3>
+
+                    <p>
+                        Treinos e competições.
+                    </p>
+
+                    <button onclick="irParaPaginaHandebol()">Ver horários →</button>
+
+                </div>
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        🏐
+                    </div>
+
+                    <h3>
+                        Vôlei
+                    </h3>
+
+                    <p>
+                        Treinos para todos.
+                    </p>
+
+                    <button onclick="irParaPaginaVolei()">Ver horários →</button>
+
+                </div>
+
+
+
+                <div class="sport-card">
+
+                    <div class="sport-icon">
+                        🏓
+                    </div>
+
+                    <h3>
+                        Tenis de mesa
+                    </h3>
+
+                    <p>
+                        Pratique e evolua.
+                    </p>
+
+                    <button onclick="irParaPaginaTenisMesa()">Ver horários →</button>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             TREINOS
+        ========================= -->
+
+        <section class="section schedule" id="treinos">
+
+
+            <div class="section-title">
+
+
+                <span>
+                    AGENDA
+                </span>
+
+
+                <h2>
+                    Próximos treinos
+                </h2>
+
+
+                <p>
+                    Confira os horários das próximas atividades.
+                </p>
+
+
+            </div>
+
+            
+
+            <div class="training-list">
+
+                <div class="training" id="listaTreinos"></div>
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+
+        <div class="logo">
+
+            <span>
+                IF
+            </span>Sports
+
+        </div>
+
+
+        <p>
+
+            Esporte, saúde e integração
+            no Instituto Federal.
+
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#modalidades">
+                Modalidades
+            </a>
+
+            <a href="#treinos">
+                Treinos
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+
+            © 2026 IFSports.
+            Projeto acadêmico.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+        function irParaPagina() {
+            window.location.href = "professor.html";
+        }
+
+        function irParaModalidades() {
+
+            document
+                .getElementById("modalidades")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+    </script>
+
+    <script src="js/sistema.js"></script>
+    <script src="js/pro.js"></script>
+</body>
+
+</html>

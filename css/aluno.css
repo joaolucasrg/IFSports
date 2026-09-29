@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8f6;
+    color: #17231b;
+}
+
+
+/* =========================
+           HEADER
+        ========================= */
+
+header {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #1d8b4c;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b554e;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #1d8b4c;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-sair {
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    background: #aa0606;
+    color: white;
+}
+
+.btn-professor {
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    background: #17231b;
+    color: white;
+}
+
+
+/* =========================
+           HERO
+        ========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 10%;
+
+    background:
+        radial-gradient(circle at 80% 30%,
+            #d9f3e3,
+            transparent 35%);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.tag {
+    color: #1d8b4c;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-top: 15px;
+
+    font-size: 70px;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #1d8b4c;
+}
+
+.hero p {
+    margin-top: 25px;
+
+    max-width: 500px;
+
+    color: #657069;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: #1d8b4c;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #146b39;
+
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: white;
+
+    color: #17231b;
+
+    padding: 15px 25px;
+
+    border-radius: 9px;
+
+    border: 1px solid #ddd;
+}
+
+
+/* =========================
+           CARD DO HERO
+        ========================= */
+
+.hero-card {
+    width: 350px;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background: #17231b;
+
+    color: white;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.bola {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+.hero-card h2 {
+    font-size: 30px;
+}
+
+.hero-card p {
+    margin-top: 10px;
+
+    color: #b8c2bc;
+
+    line-height: 1.5;
+}
+
+.stats {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #3b463f;
+}
+
+.stats div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.stats strong {
+    font-size: 22px;
+}
+
+.stats small {
+    margin-top: 5px;
+
+    color: #9ba69f;
+}
+
+
+/* =========================
+           SEÇÕES
+        ========================= */
+
+.section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #1d8b4c;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+
+    margin-top: 10px;
+}
+
+.section-title p {
+    color: #6b756e;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+           MODALIDADES
+        ========================= */
+
+.sports-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sport-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e8ebe8;
+
+    transition: 0.25s;
+}
+
+.sport-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.sport-icon {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.sport-card h3 {
+    font-size: 21px;
+}
+
+.sport-card p {
+    color: #707a73;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+}
+
+.sport-card button {
+    background: none;
+
+    color: #1d8b4c;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+           TREINOS
+        ========================= */
+
+.schedule {
+    background: #eef3ef;
+}
+
+.training-list {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.training {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.date {
+    width: 60px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #e5f5eb;
+
+    padding: 10px;
+
+    border-radius: 8px;
+}
+
+.date strong {
+    font-size: 22px;
+}
+
+.date span {
+    font-size: 11px;
+
+    color: #1d8b4c;
+
+    font-weight: 800;
+}
+
+.training-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.training button {
+    white-space: nowrap;
+}
+
+.training-info h3 {
+    font-size: 17px;
+}
+
+.training-info p {
+    color: #737d76;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+.available {
+    color: #1d8b4c;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.training button {
+    background: #17231b;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 7px;
+}
+
+
+/* =========================
+           INSCRIÇÃO
+        ========================= */
+
+.signup {
+    margin: 80px 10%;
+
+    padding: 60px;
+
+    border-radius: 25px;
+
+    background: #1d8b4c;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.signup>div:first-child {
+    max-width: 600px;
+}
+
+.signup span {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+.signup h2 {
+    font-size: 45px;
+
+    margin-top: 10px;
+}
+
+.signup p {
+    margin-top: 15px;
+
+    color: #d7f0df;
+}
+
+.signup .btn-primary {
+    margin-top: 25px;
+
+    background: white;
+
+    color: #1d8b4c;
+}
+
+.signup-icon {
+    font-size: 130px;
+}
+
+
+/* =========================
+           FOOTER
+        ========================= */
+
+footer {
+    background: #17231b;
+
+    color: white;
+
+    padding: 60px 10%;
+
+    text-align: center;
+}
+
+footer .logo {
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aab3ad;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #cbd2cd;
+
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+
+/* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .sports-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .training {
+        flex-wrap: wrap;
+    }
+
+    .signup {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .sports-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .signup {
+        margin: 40px 5%;
+
+        padding: 40px 25px;
+    }
+
+    .signup h2 {
+        font-size: 35px;
+    }
+
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iFSport - Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div id="loginPage">
+
+
+    <div class="login-container">
+
+
+        <!-- LADO ESQUERDO -->
+
+        <div class="login-left">
+
+
+            <div class="login-logo">
+                <span>IF</span>Sport
+            </div>
+
+
+
+            <h1>
+                Seu esporte.
+                <br>
+                Seu <span>IF.</span>
+            </h1>
+
+
+
+            <p>
+                A plataforma esportiva do Instituto Federal.
+                Encontre treinos, participe de modalidades
+                e acompanhe suas atividades.
+            </p>
+
+
+
+            <div class="login-sports">
+
+                <div>⚽</div>
+                <div>🏀</div>
+                <div>🏐</div>
+                <div>🏓</div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- LADO DIREITO -->
+
+        <div class="login-right">
+
+
+            <h2>
+                Bem-vindo ao iFSport
+            </h2>
+
+
+            <p class="login-description">
+                Entre ou <a href="criarconta.html">crie sua conta</a> para continuar.
+            </p>
+
+
+
+
+            <div class="user-types">
+
+
+                <button 
+                class="user-type active"
+                id="alunoBtn"
+                onclick="selecionarTipo('aluno')">
+
+
+                    <div class="user-type-icon">
+                        🎓
+                    </div>
+
+
+                    <strong>
+                        Aluno
+                    </strong>
+
+
+                    <small>
+                        Participar dos esportes
+                    </small>
+
+
+                </button>
+
+
+
+
+
+
+                <button 
+                class="user-type"
+                id="professorBtn"
+                onclick="selecionarTipo('professor')">
+
+
+                    <div class="user-type-icon">
+                        🏆
+                    </div>
+
+
+                    <strong>
+                        Professor
+                    </strong>
+
+
+                    <small>
+                        Gerenciar treinos
+                    </small>
+
+
+                </button>
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="input-group">
+
+
+                <label>
+                    Usuário
+                </label>
+
+
+                <input 
+                type="text"
+                id="usuario"
+                placeholder="Digite seu usuário">
+
+
+            </div>
+
+
+
+
+
+
+            <div class="input-group">
+
+
+                <label>
+                    Senha
+                </label>
+
+
+                <input 
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha">
+
+
+            </div>
+
+
+
+
+
+
+            <button 
+            id="botao"
+            class="login-button"
+            onclick="login()">
+
+                Entrar
+
+            </button>
+
+
+
+
+            <p id="mensagem"></p>
+
+            <a class="esquecisenha" href="https://www.google.com">Esqueci a senha</a>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<script src="js/login.js"></script>
+
+
+</body>
+
+</html>

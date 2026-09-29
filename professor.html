@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iFSport - Treinador</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="treinador-header">
+
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            ⚽
+        </div>
+
+
+        <div>
+
+            <h1>
+                iFSport
+            </h1>
+
+            <span>
+                Seu esporte. Seu IF.
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="usuario">
+
+
+        <div class="badge">
+
+            🏆 Treinador
+
+        </div>
+
+
+
+        <button 
+        class="sair"
+        onclick="sair()">
+
+            Voltar
+
+        </button>
+
+
+    </div>
+
+
+</header>
+
+
+
+
+
+
+
+
+<div class="container-treinador">
+
+
+
+    <div class="titulo">
+
+
+        <h2>
+            Painel do Treinador 🏆
+        </h2>
+
+
+        <p>
+            Gerencie seus treinos e horários.
+        </p>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ESTATÍSTICAS -->
+
+
+    <div class="cards-estatistica">
+
+
+        <div class="card-estatistica">
+
+            <h3>
+                Treinos
+            </h3>
+
+
+            <div 
+            class="numero"
+            id="totalTreinos">
+
+                0
+
+            </div>
+
+
+            <p>
+                cadastrados
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <div class="card-estatistica">
+
+
+            <h3>
+                Atletas
+            </h3>
+
+
+            <div 
+            class="numero"
+            id="totalAtletas">
+
+                0
+
+            </div>
+
+
+            <p>
+                inscritos
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+        <div class="card-estatistica">
+
+
+            <h3>
+                Próximo treino
+            </h3>
+
+
+            <div 
+            class="numero pequeno"
+            id="proximoTreino">
+
+                --
+
+            </div>
+
+
+            <p>
+                horário
+            </p>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ÁREA PRINCIPAL -->
+
+
+    <div class="area-treinador">
+
+
+
+
+
+        <!-- FORMULÁRIO -->
+
+
+        <div class="formulario-treino">
+
+
+            <h3>
+                ➕ Criar novo treino
+            </h3>
+
+
+
+
+            <div class="campo">
+
+
+                <label>
+                    Modalidade
+                </label>
+
+
+                <select id="modalidade">
+
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+
+                    <option>
+                        ⚽ Society
+                    </option>
+
+
+                    <option>
+                        🏊‍♂️ Natação
+                    </option>
+
+                    <option>
+                        ⚽ Futsal
+                    </option>
+
+
+                    <option>
+                        🏃‍♂️ Atletismo
+                    </option>
+
+                    <option>
+                        🤾 Handebol
+                    </option>
+
+                    <option>
+                        🏀 Basquete
+                    </option>
+
+                    <option>
+                        🏐 Vôlei
+                    </option>
+
+
+                    <option>
+                        🏓 Tênis de mesa
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="campo">
+
+
+                <label>
+                    Data
+                </label>
+
+
+                <input
+                type="date"
+                id="data">
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="campo">
+
+
+                <label>
+                    Horário
+                </label>
+
+
+                <input
+                type="time"
+                id="horario">
+
+
+            </div>
+
+
+
+
+
+
+            <button
+            class="botao-criar"
+            onclick="criarTreino()">
+
+
+                Criar treino
+
+
+            </button>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- LISTA -->
+
+
+        <div class="lista-treinos">
+
+
+            <h3>
+                📋 Meus treinos
+            </h3>
+
+
+
+            <div id="listaProfessor">
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="js/sistema.js"></script>
+
+<script src="js/professor.js"></script>
+
+
+</body>
+
+</html>

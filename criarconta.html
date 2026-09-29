@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iFSport - Login</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div id="loginPage">
+
+
+    <div class="login-container">
+
+
+        <!-- LADO ESQUERDO -->
+
+        <div class="login-left">
+
+
+            <div class="login-logo">
+                <span>IF</span>Sport
+            </div>
+
+
+
+            <h1>
+                Seu esporte.
+                <br>
+                Seu <span>IF.</span>
+            </h1>
+
+
+
+            <p>
+                A plataforma esportiva do Instituto Federal.
+                Encontre treinos, participe de modalidades
+                e acompanhe suas atividades.
+            </p>
+
+
+
+            <div class="login-sports">
+
+                <div>⚽</div>
+                <div>🏀</div>
+                <div>🏐</div>
+                <div>🏓</div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- LADO DIREITO -->
+
+        <div class="login-right">
+
+
+            <h2>
+                Crie sua conta
+            </h2>
+
+
+            <p class="login-description">
+                Já tem conta? <a href="index.html">Entrar</a>
+            </p>
+
+
+                <div class="input-group">
+
+
+                <label>
+                    Nome Completo
+                </label>
+
+
+                <input 
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome">
+
+
+            </div>
+
+
+            <div class="input-group">
+
+
+                <label>
+                    Matrícula
+                </label>
+
+
+                <input 
+                type="text"
+                id="matricula"
+                placeholder="Digite sua matrícula do IFRN">
+
+
+            </div>
+
+
+            <div class="input-group">
+
+
+                <label>
+                    E-Mail
+                </label>
+
+
+                <input 
+                type="text"
+                id="email"
+                placeholder="Digite seu E-Mail">
+
+
+            </div>
+
+
+            <div class="input-group">
+
+
+                <label>
+                    CPF
+                </label>
+
+
+                <input 
+                type="text"
+                id="cpf"
+                placeholder="Digite seu CPF">
+
+
+            </div>
+
+            <div class="input-group">
+
+
+                <label for="modalidades">
+                    Modalidade desejada
+                </label>
+
+
+                <select name="modalidades" id="modalidades">
+                    <option value="futsal">Futsal</option>
+                    <option value="voleibol">Voleibol</option>
+                    <option value="handebol">Handebol</option>
+                    <option value="tenis de mesa">Tênis de Mesa</option>
+                </select>
+
+
+            </div>
+
+
+
+
+
+
+
+            <button 
+            class="login-button"
+            onclick="login()">
+
+                Entrar
+
+            </button>
+
+
+
+
+            <p id="mensagem"></p>
+
+            <a class="esquecisenha" href="https://www.google.com">Esqueci a senha</a>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<script src="js/login.js"></script>
+
+
+</body>
+
+</html>
