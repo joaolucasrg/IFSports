@@ -9,14 +9,6 @@
     <title>iFSport - Aluno</title>
 
     <link rel="stylesheet" href="css/aluno.css">
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>IFSports</title>
 
     </head>
 
@@ -335,7 +327,7 @@
                         Treinos e competições.
                     </p>
 
-                    <button onclick="abrirModal(handebol)">Ver horários →</button>
+                    <button onclick="abrirModal('handebol')">Ver horários →</button>
 
                 </div>
 
@@ -586,9 +578,16 @@
                         { dia: "Quarta-feira",  hora: "12:00" }
                     ] }
                 ], horarios: [] },
-            handebol:  { nome: "Handebol",        icone: "🤾",    horarios: [] },
+            handebol:  { nome: "Handebol",        icone: "🤾", local: "Ginásio IFCN",
+                grupos: [
+                    { titulo: "Noite", horarios: [
+                        { dia: "Quarta-feira", hora: "18:00 às 20:00"},
+                        { dia: "Quinta-feira", hora: "18:00 às 20:00"},
+                        { dia: "Sexta-feira", hora: "18:00 às 20:00"}
+                    ]}
+                ] },
             volei:     { nome: "Vôlei",           icone: "🏐",    horarios: [] },
-            tenis:     { nome: "Tênis de mesa",   icone: "🏓",    horarios: [] }
+            tenismesa:     { nome: "Tênis de mesa",   icone: "🏓",    horarios: [] }
         };
  
         const modalEl = document.getElementById("modalHorarios");
