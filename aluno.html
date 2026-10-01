@@ -48,9 +48,33 @@
         </nav>
 
 
-        <button class="btn-sair" onclick="irParaPagina()">
-            Sair
+        <div class="perfil-container">
+
+    <button class="perfil-btn" onclick="togglePerfil()">
+        👤
+    </button>
+
+    <div class="perfil-menu" id="perfilMenu">
+
+        <h3>Olá, <span id="nomeAluno">Aluno</span>!</h3>
+
+        <p>Gerencie sua conta</p>
+
+        <a href="#">
+            ⚽ Meus esportes
+        </a>
+
+        <a href="#">
+            👤 Meus dados
+        </a>
+
+        <button onclick="irParaPagina()">
+            🚪 Sair
         </button>
+
+    </div>
+
+</div>
 
     </header>
 

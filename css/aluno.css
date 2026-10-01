@@ -14,6 +14,120 @@ body {
     color: #17231b;
 }
 
+/*
+        CSS DO MINI PERFIL */
+
+.perfil-container {
+    position: relative;
+}
+
+.perfil-btn {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    background: linear-gradient(135deg, #0b6b3a, #2baa68);
+
+    color: white;
+    font-size: 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+
+    transition: 0.25s ease;
+}
+
+.perfil-btn:hover {
+    transform: scale(1.08);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* PAINEL DO PERFIL */
+.perfil-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+    width: 260px;
+
+    background: linear-gradient(
+        135deg,
+        #0b6b3a,
+        #16834b,
+        #2baa68
+    );
+
+    border-radius: 16px;
+    padding: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    display: none;
+    z-index: 1000;
+
+    color: white;
+}
+
+
+/* efeito ao passar o mouse */
+.perfil-menu a:hover,
+.perfil-menu button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* quando estiver aberto */
+.perfil-menu.aberto {
+    display: block;
+}
+
+/* título */
+.perfil-menu h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.perfil-menu p {
+    margin: 0 0 15px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* opções */
+.perfil-menu a,
+.perfil-menu button {
+    width: 100%;
+    display: block;
+
+    padding: 12px 14px;
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    text-decoration: none;
+    text-align: left;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.perfil-menu a:hover,
+.perfil-menu button:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
 
 /* =========================
            HEADER

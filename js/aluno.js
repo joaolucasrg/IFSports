@@ -6,7 +6,24 @@ if(localStorage.getItem("tipoUsuario") !== "aluno"){
 }
 
 
+function togglePerfil() {
+    const menu = document.getElementById("perfilMenu");
 
+    menu.classList.toggle("aberto");
+}
+
+document.addEventListener("click", function(event) {
+    const perfil = document.querySelector(".perfil-container");
+    const menu = document.getElementById("perfilMenu");
+
+    if (!perfil.contains(event.target)) {
+        menu.classList.remove("aberto");
+    }
+});
+
+function irParaPagina() {
+    window.location.href = "index.html";
+}
 
 function carregarTreinos(){
 
