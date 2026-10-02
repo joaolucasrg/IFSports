@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus dados</title>
+    <link rel="stylesheet" href="css/aluno.css">
+</head>
+<body>
+
+     <header>
+
+        <div class="logo">
+            <a href="aluno.html"><span>IF</span>Sports</a>
+        </div>
+
+
+        <nav>
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#modalidades">
+                Modalidades
+            </a>
+
+            <a href="#treinos">
+                Treinos
+            </a>
+
+            <a href="#">
+                Competições
+            </a>
+
+        </nav>
+
+
+        <div class="perfil-container">
+
+    <button class="perfil-btn" onclick="togglePerfil()">
+        👤
+    </button>
+
+    <div class="perfil-menu" id="perfilMenu">
+
+        <h3>Olá, <span id="nomeAluno">Aluno</span>!</h3>
+
+        <p>Gerencie sua conta</p>
+
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
+            ⚽ Meus esportes
+        </a>
+
+        <a href="#">
+            👤 Meus dados
+        </a>
+
+        <button onclick="irParaPagina()">
+            🚪 Sair
+        </button>
+
+    </div>
+
+</div>
+
+    </header>
+
+ <main class="dados-page">
+
+        <section class="dados-card">
+
+            <div class="dados-topo">
+                <div class="dados-avatar">LG</div>
+
+                <div>
+                    <h1>Lucas Gabriel Oliveira</h1>
+                    <span class="dados-badge">● Aluno ativo</span>
+                </div>
+            </div>
+
+            <div class="dados-corpo">
+
+                <div class="dados-item">
+                    <div class="dados-icone">🆔</div>
+                    <div>
+                        <small>Matrícula</small>
+                        <strong>20260001</strong>
+                    </div>
+                </div>
+
+                <div class="dados-item">
+                    <div class="dados-icone">📄</div>
+                    <div>
+                        <small>CPF</small>
+                        <strong>123.456.789-00</strong>
+                    </div>
+                </div>
+
+                <div class="dados-item">
+                    <div class="dados-icone">🎂</div>
+                    <div>
+                        <small>Data de nascimento</small>
+                        <strong>14/08/2002</strong>
+                    </div>
+                </div>
+
+                <div class="dados-item">
+                    <div class="dados-icone">✉️</div>
+                    <div>
+                        <small>E-mail</small>
+                        <strong>lucas.oliveira@email.com</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+<script src="js/aluno.js"></script>
+
+</body>
+</html>
