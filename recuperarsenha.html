@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iFSports - Recuperar senha</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/recuperar.css">
+
+</head>
+
+
+<body>
+
+<div id="loginPage">
+
+    <div class="login-container">
+
+        <!-- LADO ESQUERDO -->
+
+        <div class="login-left">
+
+            <div class="login-logo">
+                <span>IF</span>Sports
+            </div>
+
+            <h1>
+                Esqueceu a senha?
+                <br>
+                Sem <span>problemas.</span>
+            </h1>
+
+            <p>
+                Informe o e-mail da sua conta e enviaremos
+                um código para você voltar a acessar
+                seus treinos e modalidades.
+            </p>
+
+            <div class="login-sports">
+
+                <div>⚽</div>
+                <div>🏀</div>
+                <div>🏐</div>
+                <div>🏓</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LADO DIREITO -->
+
+        <div class="login-right">
+
+            <h2>Recuperar senha</h2>
+
+            <!-- ETAPA 1: EMAIL -->
+
+            <div id="etapaEmail">
+
+                <p class="login-description">
+                    Digite o e-mail cadastrado para receber o código de recuperação.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                    type="email"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email">
+
+                </div>
+
+                <button
+                id="botaoEnviar"
+                class="login-button"
+                onclick="enviarCodigo()">
+
+                    Enviar código
+
+                </button>
+
+            </div>
+
+
+            <!-- ETAPA 2: CÓDIGO -->
+
+            <div id="etapaCodigo" class="hidden">
+
+                <p class="login-description">
+                    Enviamos um código de 6 dígitos para
+                    <strong id="emailEnviado"></strong>.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="codigo1">Código de recuperação</label>
+
+                    <div class="codigo-inputs" id="codigoInputs">
+
+                        <input type="text" id="codigo1" maxlength="1" inputmode="numeric" autocomplete="one-time-code" aria-label="Dígito 1">
+                        <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 2">
+                        <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 3">
+                        <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 4">
+                        <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 5">
+                        <input type="text" maxlength="1" inputmode="numeric" aria-label="Dígito 6">
+
+                    </div>
+
+                </div>
+
+                <button
+                id="botaoVerificar"
+                class="login-button"
+                onclick="verificarCodigo()">
+
+                    Verificar código
+
+                </button>
+
+                <div class="acoes-codigo">
+
+                    <button type="button" id="botaoReenviar" class="link-button" onclick="reenviarCodigo()">
+                        Reenviar código
+                    </button>
+
+                    <button type="button" class="link-button" onclick="alterarEmail()">
+                        Alterar e-mail
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <p id="mensagem"></p>
+
+            <a class="esquecisenha" href="index.html">Voltar para o login</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/recuperar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+/* ==========================
+   RECUPERAR SENHA
+   (carregar depois do style.css)
+========================== */
+
+
+.hidden{
+    display:none;
+}
+
+
+.login-description strong{
+    color:#17231b;
+    word-break:break-all;
+}
+
+
+.esquecisenha{
+    display:block;
+    text-decoration:none;
+    margin-top:40px;
+}
+
+.esquecisenha:hover{
+    text-decoration:underline;
+}
+
+
+
+/* CAMPOS DO CÓDIGO */
+
+.codigo-inputs{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,42px);
+
+    gap:10px;
+
+    justify-content: center;
+
+}
+
+
+.input-group .codigo-inputs input{
+
+    height:46px;
+
+    padding:0;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#17231b;
+
+}
+
+
+.input-group .codigo-inputs input.preenchido{
+
+    border-color:#1d8b4c;
+
+    background:#eef8f2;
+
+}
+
+
+.input-group .codigo-inputs input.erro{
+
+    border-color:red;
+
+    background:#fff3f3;
+
+}
+
+
+
+/* AÇÕES SECUNDÁRIAS */
+
+.acoes-codigo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:15px;
+
+}
+
+
+.link-button{
+
+    background:none;
+
+    border:none;
+
+    color:#1d8b4c;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    padding:5px 0;
+
+}
+
+
+.link-button:hover:not(:disabled){
+
+    text-decoration:underline;
+
+}
+
+
+.link-button:disabled{
+
+    color:#9aa39d;
+
+    cursor:not-allowed;
+
+}
+
+#etapaCodigo .input-group label{
+    text-align: center;
+}
+
+#etapaCodigo .login-description{
+    margin-bottom: 45px;
+}
+
+/* MENSAGEM DE SUCESSO */
+
+#mensagem.sucesso{
+    color:#1d8b4c;
+    font-weight:bold;
+}
+
+
+@media(max-width:600px){
+
+    .codigo-inputs{
+        grid-template-columns:repeat(6,38px);
+        gap:6px;
+    }
+
+}
