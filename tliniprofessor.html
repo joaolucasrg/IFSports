@@ -235,7 +235,7 @@
                         Treinos e competições.
                     </p>
 
-                    <button onclick="irParaPaginaSociety()">Editar horários →</button>
+                    <button onclick="abrirModal('futebol')">Editar horários →</button>
 
                 </div>
 
@@ -255,7 +255,7 @@
                         Treine e evolua .
                     </p>
 
-                    <button onclick="irParaPaginaNatacao()">Editar horários →</button>
+                    <button onclick="abrirModal('natacao')">Editar horários →</button>
 
                 </div>
 
@@ -273,7 +273,7 @@
                         Treinos e competições.
                     </p>
 
-                    <button onclick="irParaPaginaAtletismo()">Editar horários →</button>
+                    <button onclick="abrirModal('atletismo')">Editar horários →</button>
 
                 </div>
 
@@ -291,7 +291,7 @@
                         Treinos e campeonatos.
                     </p>
 
-                    <button onclick="irParaPaginaBasquete()">Editar horários →</button>
+                    <button onclick="abrirModal('basquete')">Editar horários →</button>
 
                 </div>
 
@@ -309,7 +309,7 @@
                         Treinos e competições.
                     </p>
 
-                    <button onclick="irParaPaginaFutsal()">Editar horários →</button>
+                    <button onclick="abrirModal('futsal')">Editar horários →</button>
 
                 </div>
 
@@ -327,7 +327,7 @@
                         Treinos e competições.
                     </p>
 
-                    <button onclick="irParaPaginaHandebol()">Editar horários →</button>
+                    <button onclick="abrirModal('handebol')">Editar horários →</button>
 
                 </div>
 
@@ -345,7 +345,7 @@
                         Treinos para todos.
                     </p>
 
-                    <button onclick="irParaPaginaVolei()">Editar horários →</button>
+                    <button onclick="abrirModal('volei')">Editar horários →</button>
 
                 </div>
 
@@ -365,7 +365,7 @@
                         Pratique e evolua.
                     </p>
 
-                    <button onclick="irParaPaginaTenisMesa()">Editar horários →</button>
+                    <button onclick="abrirModal('tenismesa')">Editar horários →</button>
 
                 </div>
 
@@ -469,20 +469,6 @@
 
         </p>
 
-    <div class="modal-overlay" id="modalHorarios" hidden>
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
- 
-            <div class="modal-topo">
-                <button class="modal-fechar" onclick="fecharModal()" aria-label="Fechar">×</button>
-                <div class="modal-icone" id="modalIcone"></div>
-                <h3 id="modalTitulo"></h3>
-            </div>
- 
-            <div class="modal-corpo" id="modalConteudo"></div>
- 
-        </div>
-    </div>
-
 
     </footer>
 
@@ -507,6 +493,20 @@
 
         }
     </script>
+
+        <div class="modal-overlay" id="modalHorarios" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+ 
+            <div class="modal-topo">
+                <button class="modal-fechar" onclick="fecharModal()" aria-label="Fechar">×</button>
+                <div class="modal-icone" id="modalIcone"></div>
+                <h3 id="modalTitulo"></h3>
+            </div>
+ 
+            <div class="modal-corpo" id="modalConteudo"></div>
+ 
+        </div>
+    </div>
 
     <script src="js/sistema.js"></script>
     <script src="js/pro.js"></script>
