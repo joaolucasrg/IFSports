@@ -17,15 +17,15 @@
 
         <nav>
 
-            <a href="#inicio">
+            <a href="aluno.html#inicio">
                 Início
             </a>
 
-            <a href="#modalidades">
+            <a href="aluno.html#modalidades">
                 Modalidades
             </a>
 
-            <a href="#treinos">
+            <a href="aluno.html#treinos">
                 Treinos
             </a>
 
@@ -68,58 +68,106 @@
 
  <main class="dados-page">
 
-        <section class="dados-card">
+    <section class="dados-card">
 
-            <div class="dados-topo">
-                <div class="dados-avatar">LG</div>
+        <div class="dados-topo">
+            <div class="dados-avatar">LG</div>
 
-                <div>
-                    <h1>Lucas Gabriel Oliveira</h1>
-                    <span class="dados-badge">● Aluno ativo</span>
+            <div>
+                <h1>Lucas Gabriel Oliveira</h1>
+                <span class="dados-badge">● Aluno ativo</span>
+            </div>
+        </div>
+
+        <div class="dados-corpo">
+
+            <!-- ALTERADO: cada bloco ganhou data-campo, o botão de lápis e as classes dados-info / dados-valor -->
+
+            <div class="dados-item" data-campo="matricula">
+                <button type="button" class="btn-editar" aria-label="Editar Matrícula" onclick="abrirModalSenha('matricula')">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                </button>
+                <div class="dados-icone">🆔</div>
+                <div class="dados-info">
+                    <small>Matrícula</small>
+                    <strong class="dados-valor">20260001</strong>
                 </div>
             </div>
 
-            <div class="dados-corpo">
-
-                <div class="dados-item">
-                    <div class="dados-icone">🆔</div>
-                    <div>
-                        <small>Matrícula</small>
-                        <strong>20260001</strong>
-                    </div>
+            <div class="dados-item" data-campo="cpf">
+                <button type="button" class="btn-editar" aria-label="Editar CPF" onclick="abrirModalSenha('cpf')">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                </button>
+                <div class="dados-icone">📄</div>
+                <div class="dados-info">
+                    <small>CPF</small>
+                    <strong class="dados-valor">123.456.789-00</strong>
                 </div>
-
-                <div class="dados-item">
-                    <div class="dados-icone">📄</div>
-                    <div>
-                        <small>CPF</small>
-                        <strong>123.456.789-00</strong>
-                    </div>
-                </div>
-
-                <div class="dados-item">
-                    <div class="dados-icone">🎂</div>
-                    <div>
-                        <small>Data de nascimento</small>
-                        <strong>14/08/2002</strong>
-                    </div>
-                </div>
-
-                <div class="dados-item">
-                    <div class="dados-icone">✉️</div>
-                    <div>
-                        <small>E-mail</small>
-                        <strong>lucas.oliveira@email.com</strong>
-                    </div>
-                </div>
-
             </div>
 
-        </section>
+            <div class="dados-item" data-campo="nascimento">
+                <button type="button" class="btn-editar" aria-label="Editar Data de nascimento" onclick="abrirModalSenha('nascimento')">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                </button>
+                <div class="dados-icone">🎂</div>
+                <div class="dados-info">
+                    <small>Data de nascimento</small>
+                    <strong class="dados-valor">14/08/2002</strong>
+                </div>
+            </div>
 
-    </main>
-    
-<script src="js/aluno.js"></script>
+            <div class="dados-item" data-campo="email">
+                <button type="button" class="btn-editar" aria-label="Editar E-mail" onclick="abrirModalSenha('email')">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                </button>
+                <div class="dados-icone">✉️</div>
+                <div class="dados-info">
+                    <small>E-mail</small>
+                    <strong class="dados-valor">lucas.oliveira@email.com</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- NOVO: modal de confirmação de senha (reaproveita as classes .modal-* do aluno.css) -->
+<div class="modal-overlay" id="modalSenha" hidden>
+    <div class="modal modal-senha" role="dialog" aria-modal="true" aria-labelledby="tituloModalSenha">
+
+        <div class="modal-topo">
+            <div class="modal-icone">🔒</div>
+            <h3 id="tituloModalSenha">Confirme sua senha</h3>
+            <button type="button" class="modal-fechar" aria-label="Fechar" onclick="fecharModalSenha()">×</button>
+        </div>
+
+        <form class="modal-corpo" id="formSenha" novalidate>
+
+            <p class="senha-aviso">
+                Para editar <strong id="campoAlvo">este dado</strong>, confirme sua senha.
+            </p>
+
+            <label class="campo-label" for="inputSenha">Senha</label>
+            <input class="campo-input" type="password" id="inputSenha" autocomplete="current-password">
+
+            <label class="campo-label" for="inputSenha2">Repetir senha</label>
+            <input class="campo-input" type="password" id="inputSenha2" autocomplete="current-password">
+
+            <p class="campo-erro" id="erroSenha" role="alert" hidden></p>
+
+            <div class="form-acoes">
+                <button type="button" class="btn-cancelar" onclick="fecharModalSenha()">Cancelar</button>
+                <button type="submit" class="btn-confirmar">Confirmar</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- ALTERADO: antes era js/aluno.js -->
+<script src="js/dadosaluno.js"></script>
 
 </body>
 </html>
