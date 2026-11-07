@@ -1428,3 +1428,112 @@ body.modal-aberto {
         width: 100%;
     }
 }
+
+/* =========================
+        COMPETIÇÕES (NOVO)
+   ========================= */
+
+.comp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.comp-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px 24px 26px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #e8ebe8;
+    border-radius: 15px;
+
+    transition: 0.25s;
+}
+
+.comp-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.comp-logo {
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+    padding: 12px;
+
+    border-radius: 12px;
+    border: 1px solid #eef1ee;
+
+    background: #f7f8f6;
+}
+
+.comp-logo img {
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+.comp-logo-fallback {
+    font-size: 48px;
+}
+
+.comp-card h3 {
+    margin-bottom: 22px;
+
+    font-size: 21px;
+}
+
+.btn-datas {
+    width: 100%;
+
+    margin-top: auto;
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    background: #1d8b4c;
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.btn-datas:hover {
+    background: #146b39;
+
+    transform: translateY(-2px);
+}
+
+.btn-datas:focus-visible {
+    outline: 2px solid #1d8b4c;
+    outline-offset: 2px;
+}
+
+/* Logo dentro do cabeçalho do modal */
+
+.modal-icone.com-logo {
+    padding: 5px;
+
+    background: white;
+}
+
+.modal-icone img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}

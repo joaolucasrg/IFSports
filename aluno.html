@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="css/aluno.css">
 
-    </head>
+</head>
 
 
 <body>
@@ -41,7 +41,7 @@
                 Treinos
             </a>
 
-            <a href="#">
+            <a href="#competicoes">
                 Competições
             </a>
 
@@ -50,31 +50,31 @@
 
         <div class="perfil-container">
 
-    <button class="perfil-btn" onclick="togglePerfil()">
-        👤
-    </button>
+            <button class="perfil-btn" onclick="togglePerfil()">
+                👤
+            </button>
 
-    <div class="perfil-menu" id="perfilMenu">
+            <div class="perfil-menu" id="perfilMenu">
 
-        <h3>Olá, <span id="nomeAluno">Aluno</span>!</h3>
+                <h3>Olá, <span id="nomeAluno">Aluno</span>!</h3>
 
-        <p>Gerencie sua conta</p>
+                <p>Gerencie sua conta</p>
 
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
-            ⚽ Meus esportes
-        </a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
+                    ⚽ Meus esportes
+                </a>
 
-        <a href="dadosaluno.html">
-            👤 Meus dados
-        </a>
+                <a href="dadosaluno.html">
+                    👤 Meus dados
+                </a>
 
-        <button onclick="irParaPagina()">
-            🚪 Sair
-        </button>
+                <button onclick="irParaPagina()">
+                    🚪 Sair
+                </button>
 
-    </div>
+            </div>
 
-</div>
+        </div>
 
     </header>
 
@@ -117,7 +117,7 @@
 
 
                 <div class="hero-buttons">
-                    
+
 
                     <button class="btn-secondary" onclick="irParaTreinos()">
 
@@ -132,7 +132,7 @@
 
                     </button>
 
-                    
+
 
 
                 </div>
@@ -267,7 +267,7 @@
 
                 </div>
 
-                
+
 
                 <div class="sport-card">
 
@@ -432,7 +432,7 @@
 
             </div>
 
-            
+
 
             <div class="training-list">
 
@@ -442,6 +442,32 @@
 
 
         </section>
+
+        <!-- =========================
+            COMPETIÇÕES
+        ========================= -->
+
+        <section class="section" id="competicoes">
+
+            <div class="section-title">
+
+                <span>
+                    DISPUTE
+                </span>
+
+                <h2>
+                    Competições
+                </h2>
+
+                <p>
+                    Confira as datas das etapas de cada competição.
+                </p>
+
+            </div>
+
+            <div class="comp-grid" id="listaCompeticoes"></div>
+
+        </section>      
 
 
     </main>
@@ -566,17 +592,17 @@
 
     </script>
 
-        <div class="modal-overlay" id="modalHorarios" hidden>
+    <div class="modal-overlay" id="modalHorarios" hidden>
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
- 
+
             <div class="modal-topo">
                 <button class="modal-fechar" onclick="fecharModal()" aria-label="Fechar">×</button>
                 <div class="modal-icone" id="modalIcone"></div>
                 <h3 id="modalTitulo"></h3>
             </div>
- 
+
             <div class="modal-corpo" id="modalConteudo"></div>
- 
+
         </div>
     </div>
 
@@ -585,6 +611,8 @@
     <script src="js/sistema.js"></script>
 
     <script src="js/aluno.js"></script>
+
+    <script src="js/competicoes.js"></script>
 
 </body>
 
